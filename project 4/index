@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Stephen R Ouellette: Lab #1</title>
+        </head>
+        <body>
+            <!-- this is a comment; it's never displayed but still exists -->
+            <h1>Lab #1</h1>
+            <p>This tag opens a paragraph of text and closes the "p" tag.</p>
+            <p> <!-- Anchors  give clickable connections to other pages -->  
+                <a href="another-html-document.html">
+                    Link text for a link to another-html-document.html
+                </a>
+            </p>
+            <!-- this is your JavaScript homework assignment -->
+            <script>
+                <!-- JS source code written between tags -->
+            </script>
+        </body>
+    </html>

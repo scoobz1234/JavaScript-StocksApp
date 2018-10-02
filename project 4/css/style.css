@@ -1,0 +1,79 @@
+:root {
+    --main-bg-color:            rgb(125,125,125);
+    --nav-bg-color:             rgb(0,0,0);
+    --nav-highlight-bg-color:   rgb(120,120,120);
+    --nav-font-family:          sans-serif;
+    --nav-font-size:            9px;
+    --tab-font-family:          sans-serif;
+    --tab-font-type:            arial;
+    --tab-nth-even-bg-color:    rgb(200,200,200);
+    --tab-nth-odd-bg-color:     rgb(125,125,125);
+    --footer-bg-color:          rgb(0,0,0);
+    --footer-font-color:        rgb(255,255,255);
+    --footer-font-family:       sans-serif;
+    --footer-font-type:         'hind';
+    --footer-font-size:         20px;
+}
+
+/*NAVIGATION BARS*/
+
+nav {width: 100%; background-color: var(--nav-bg-color); overflow: hidden;}
+nav a {display: block; float: left; text-decoration: none;}
+nav a {font-family: var(--nav-font-family); font-size: var(--nav-font-size); color: white;}
+nav a {padding-top: 20px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;}
+nav a:hover {background-color: var(--nav-highlight-bg-color);}
+#logo {padding-left: 15px; padding-right: 30px; margin-right: 10px; margin-top: -20px;}
+#logo {font-family: 'Hind', sans-serif; font-size: 30px; letter-spacing: -2px; text-shadow: 1px 1px 2px #c4c4c4;}
+
+/*FORMS*/
+
+form {width:480px; position: absolute; z-index: 0;}
+fieldset {border-width: 3px; border-color: black;}
+label {width:125px; clear:left; padding-right:10px;}
+input, label {float:left;}
+input {background-color: darkgray}
+input:focus {background-color: red}
+#typeofTrans {border-style:solid; clear:left; width: 350px; height:40px;}
+.totalAmount {display:block; font-weight: bold; font-size: 40px; padding:5px; text-align-last: center;}
+body {background-color: var(--main-bg-color);}
+
+/*WIDGETS*/
+
+#stockWidget2 {padding-left:500px; padding-top:25px;}
+
+
+/*ANIMATION*/
+/* this binds the animation to the id for the created by div. here we define the size,starting color, height ect.. next we have
+the animation name, which is how we bind the keyframes rule to the ID. then we define how long the duration is. lastly we set
+the iteration count, which handles how many times the animation loops. in this case its infinite.*/
+#cby { width: 150px; height: 100px; background-color: red; position: relative; animation-name: cbyAnim; animation-duration: 4s;}
+#cby { animation-iteration-count: infinite; font-weight: bold; font-size: 30px;}
+/*@keyframes rule which handles the animation. the % breaks the animation duration from above down into quarters, which makes
+for a more fluid looking transitions...also my picture has four sides, so we have four stops*/
+@keyframes cbyAnim {
+    0% {left:0px; top:0px;} 
+    25% {left:525px; top:0px;}
+    50% {left:525px; top:600px;} 
+    75% {left:0px; top:600px;} 
+    100% {left:0px; top:0px;}
+}
+
+#pic {position:absolute; padding-left: 150px; padding-top:100px}
+
+/* TABLES */
+
+table {font-family: var(--tab-font-family); font: var(--tab-font-type); border-collapse: collapse; width: 100%;}
+td, th {border: 1px solid black; text-align: left; padding: 8px;}
+th {border: 2px solid black;}
+tr:nth-child(even) {background-color: var(--tab-nth-even-bg-color);}
+tr:nth-child(odd) {background-color: var(--tab-nth-odd-bg-color)}
+#dataTable {position: absolute; top: 700px; border: 2px solid black;}
+
+/* FOOTER */
+
+footer {position: fixed; left: 0; bottom: 0; width: 100%;}
+footer {background-color: var(--footer-bg-color); color: var(--footer-font-color); text-align: center;}
+footer {font-family: var(--footer-font-family); font: var(--footer-font-type); font-size: var(--footer-font-size);}
+footer {letter-spacing: 1px; text-shadow: 1px 1px 2px #c4c4c4;}
+#foot {position: relative; animation-name: footAnim; animation-duration: 8s; animation-iteration-count: infinite; right: 900px;}
+@keyframes footAnim {0% {left:-800px; top:0px;}50% {left:0px; top:0px;} 100% {left:800px; top:0px;}}
